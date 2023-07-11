@@ -3,7 +3,7 @@ let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo')
 
 window.addEventListener('DOMContentLoaded', () => {
-    
+
     setTimeout(() => {
 
         logoSpan.forEach((span, idx) => {
@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }, (idx + 1) * 400)
         });
 
-        setTimeout(()  => {
+        setTimeout(() => {
             logoSpan.forEach((span, idx) => {
                 setTimeout(() => {
                     span.classList.remove('active');
