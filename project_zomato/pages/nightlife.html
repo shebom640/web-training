@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Zomato</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="StyleSheet" href="../styles/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="margin">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid" style="background-color: transparent; margin-top: 10px;">
+                    <div>
+                        <img src="../assets/zomato.avif" alt="zomatoImage" , width="126px">
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="centeredDiv">
+                        <div class="dropdown">
+                            <button class="buttonDropDown" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false" style="background-color: transparent;">
+                                <div style="display: flex; height: 3vh; align-items: start; width: 150px;">
+                                    <img src="../assets/location.png" alt="location" height="20px">
+                                    <p style="font-size: 20; text-align: start; color: grey;">Kolkata</p>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Your Current Location</a></li>
+                            </ul>
+                        </div>
+                        <div class="vl"></div>
+                        <form class="d-flex" style="width: 50%; margin: 0; padding: 0;">
+                            <input class="searchButton" type="search" placeholder="Search for food and restuarants"
+                                aria-label="Search">
+                        </form>
+                    </div>
+                    <button type="button" class="login" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">Login</button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Login Page</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInput">Email address</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword"
+                                            placeholder="Password">
+                                        <label for="floatingPassword">Password</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="signUp" disabled>Sign Up</button>
+                </div>
+            </nav>
+        </div>
+        <div style="display: flex; margin-left: 7%; margin-right: 5%; margin-top: 2.5%;">
+            <nav>
+                <a href="../index.html">
+                    <div class="header">
+                        <div style="height: 50px; width: 50px; position: absolute; left: 10%; top: 14.5%;">
+                            <img src="../assets/delivery.png" , alt="image">
+                        </div>
+                        <div style="position: absolute; left: 15%; top: 16%;">
+                            <h1 style="font-size: xx-large; color: black;">Delivery</h1>
+                        </div>
+                    </div>
+                </a>
+                <a href="../pages/dining.html">
+                    <div class="header">
+                        <div style="height: 75px; width: 75px; position: absolute; left: 26%; top: 14.5%;">
+                            <img src="../assets/delivery.png" , alt="image">
+                        </div>
+                        <div style="position: absolute; left: 31%; top: 16%;">
+                            <h1 style="font-size: xx-large; color: black;">Dining</h1>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="header">
+                        <div style="height: 75px; width: 75px; position: absolute; left: 42%; top: 14.5%;">
+                            <img src="../assets/delivery.png" , alt="image">
+                        </div>
+                        <div style="position: absolute; left: 47%; top: 16%;">
+                            <h1 style="font-size: xx-large; color: rgb(255, 1, 1);">NightLife</h1>
+                        </div>
+                    </div>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="mainDiv">
+            <div class="cardsDiv">
+                <h1 class="inspiration">NightLife restaurants in Kolkata</h1>
+
+                <div class="allCards">
+
+                    <div class="lists" data-aos="slide-up">
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/one8.avif" class="card-img-top" alt="..." height="250vh">
+                            <div class="card-body" style="height: 50px;">
+                                <h3 class="card-text">One 8</h3>
+                                <p class="card-text">Finger Food, Continental <span class="badge bg-success">4.5</span>
+                                </p>
+                                <p style="text-align: end;">3.2 KM</p>
+                            </div>
+                        </div>
+                        <span class="spacer"></span>
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/romania.avif" class="card-img-top" alt="..." height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">Romania</h3>
+                                <p class="card-text">Continental, Mexican, North Indian <span
+                                        class="badge bg-success">4.5</span></p>
+                                <p style="text-align: end;">4.5 KM</p>
+                            </div>
+                        </div>
+                        <span class="spacer"></span>
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/raasta.avif" class="card-img-top" alt="..." height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">Raasta</h3>
+                                <p class="card-text">North Indian, Chinese <span class="badge bg-success">4.5</span></p>
+                                <p style="text-align: end;">4.7 KM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lists" data-aos="slide-up">
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/effingut.avif" class="card-img-top" alt="..."
+                                height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">Effingut</h3>
+                                <p class="card-text">North Indian, Continental, Chinese <span
+                                        class="badge bg-success">4.5</span></p>
+                                <p style="text-align: end;">4 KM</p>
+                            </div>
+                        </div>
+                        <span class="spacer"></span>
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/uno.avif" class="card-img-top" alt="..." height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">UNO Pizzeria</h3>
+                                <p class="card-text">Pizza, Finger Food, Continental <span
+                                        class="badge bg-success">4.5</span></p>
+                                <p style="text-align: end;">5 KM</p>
+                            </div>
+                        </div>
+                        <span class="spacer"></span>
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/octa.avif" class="card-img-top" alt="..." height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">Octa</h3>
+                                <p class="card-text">Sushi, Continental <span class="badge bg-success">4.5</span> </p>
+                                <p style="text-align: end;">6 KM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lists" data-aos="slide-up">
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/sobasassy.avif" class="card-img-top" alt="..."
+                                height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">Soba Sassy</h3>
+                                <p class="card-text">Asian, Chinese <span class="badge bg-success">4.5</span></p>
+                                <p style="text-align: end;">4.5 KM</p>
+                            </div>
+                        </div>
+                        <span class="spacer"></span>
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/ozora.avif" class="card-img-top" alt="..." height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">Ozora</h3>
+                                <p class="card-text">Continental, Asian <span class="badge bg-success">4.5</span></p>
+                                <p style="text-align: end;">4 KM</p>
+                            </div>
+                        </div>
+                        <span class="spacer"></span>
+                        <div class="card cardAnimation" style="width: 18rem;" onclick="clicked()">
+                            <img src="../assets/restuarants/bikers.avif" class="card-img-top" alt="..." height="250vh">
+                            <div class="card-body">
+                                <h3 class="card-text">The Bikers Cafe</h3>
+                                <p class="card-text">Italian, American, Fast Food <span
+                                        class="badge bg-success">4.5</span></p>
+                                <p style="text-align: end;">5 KM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+
+        <div class="footer-clean">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Zomato</h3>
+                            <ul>
+                                <li><a href="#">
+                                        <h6>About Zomato</h6>
+                                    </a></li>
+                                <li><a href="#">Who we are</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Work with us</a></li>
+                                <li><a href="#">Investor Relations</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">
+                                        <h6>Zomaverse</h6>
+                                    </a></li>
+                                <li><a href="#">Zomato</a></li>
+                                <li><a href="#">Blinkit </a></li>
+                                <li><a href="#">Feeding India </a></li>
+                                <li><a href="#">Zomaland </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Learn More</h3>
+                            <ul>
+                                <li><a
+                                        href="https://www.astartingpoint.com/static/privacy.html?gclid=CjwKCAjw-7OlBhB8EiwAnoOEk_frIHOr9JSDl4JfhI5yUllhK20AYfn5Cmk9b2TXu0flZs9n56UhlxoCOWUQAvD_BwE">Privacy</a>
+                                </li>
+                                <li><a
+                                        href="https://www.astartingpoint.com/static/privacy.html?gclid=CjwKCAjw-7OlBhB8EiwAnoOEk_frIHOr9JSDl4JfhI5yUllhK20AYfn5Cmk9b2TXu0flZs9n56UhlxoCOWUQAvD_BwE">Security</a>
+                                </li>
+                                <li><a
+                                        href="https://www.astartingpoint.com/static/privacy.html?gclid=CjwKCAjw-7OlBhB8EiwAnoOEk_frIHOr9JSDl4JfhI5yUllhK20AYfn5Cmk9b2TXu0flZs9n56UhlxoCOWUQAvD_BwE">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a
+                                href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i
+                                    class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                    class="icon ion-social-instagram"></i></a>
+                            <p class="copyright">Zomato-Replica © 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </footer>
+        </div>
+
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../scripts/index.js"></script>
+</body>
+
+</html>

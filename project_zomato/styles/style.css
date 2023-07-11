@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    /* margin-left: 2.5%;
+    margin-right: 2.5%; */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.margin{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fa0000;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.centeredDiv {
+    display: flex;
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    padding-right: 0px;
+    height: 7vh;
+    border-color: rgb(194, 194, 194);
+    border-radius: 10px;
+    border-width: 1px;
+}
+.vl {
+    border-left: 2px solid rgb(194, 194, 194);
+    height: 7vh;
+    position: absolute;
+    top: 23%;
+    left: 35%;
+  }
+
+.buttonDropDown{
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.formSearch{
+    border: none;
+}
+
+.searchButton{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    width: 100%;
+}
+
+.login{
+    background-color: transparent;
+    border: none;
+    padding-right: 25px;
+}
+
+.signUp{
+    background-color: transparent;
+    border: none;
+    padding-right: 25px;
+}
+
+.header{
+    display: flex;
+    padding: 2px;
+}
+
+.header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .header h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+  }
+
+.mainDiv{
+    margin-top: 7%;
+}
+
+.carousel1{
+    margin: 0;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.025);
+    width: 100%;
+    height: 50vh;
+}
+
+.carousel2{
+    margin: 0;
+    padding: 25px;
+    width: 100%;
+    height: 50vh;
+}
+
+.inspiration{
+    position: absolute;
+    left: 12%;
+    color: black;
+    font-size: 24px;
+}
+
+.cardsDiv{
+    margin-left: 5%;
+}
+
+.allCards{
+    position: absolute;
+    left: 10%;
+}
+
+.spacer {
+    padding: 0 3vw;
+}
+
+
+.lists{
+    display: flex;
+    /* border: 5px solid; */
+    margin: auto;
+    padding: 5%;
+}
+
+.footer-clean {
+    margin-top: 120%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding:50px 0;
+    background-color:#fff;
+    color:#4b4c4d;
+  }
+  
+  .footer-clean h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-clean ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-clean ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-clean ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-clean .item.social {
+    text-align:right;
+  }
+
+
+  /* .cardAnimation{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+} */
+
+.cardAnimation:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  cursor: grab;
+}
