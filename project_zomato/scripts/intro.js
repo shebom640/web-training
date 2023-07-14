@@ -4,8 +4,6 @@ let logoSpan = document.querySelectorAll('.logo')
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    setTimeout(() => {
-
         logoSpan.forEach((span, idx) => {
             setTimeout(() => {
                 span.classList.add('active');
@@ -25,5 +23,4 @@ window.addEventListener('DOMContentLoaded', () => {
             intro.style.top = "-100vh"
         }, 2500)
 
-    })
 })
